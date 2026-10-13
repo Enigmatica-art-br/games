@@ -1,12 +1,4 @@
-const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-const root = document.documentElement;
-
-if (!reduceMotion) {
-  window.addEventListener('pointermove', (event) => {
-    root.style.setProperty('--pointer-x', `${event.clientX}px`);
-    root.style.setProperty('--pointer-y', `${event.clientY}px`);
-  }, { passive: true });
-}
+document.getElementById('year').textContent = new Date().getFullYear();
 
 const observer = new IntersectionObserver((entries) => {
   for (const entry of entries) {
@@ -15,11 +7,9 @@ const observer = new IntersectionObserver((entries) => {
       observer.unobserve(entry.target);
     }
   }
-}, { threshold: 0.12, rootMargin: '0px 0px -5% 0px' });
+}, { threshold: 0.14 });
 
 document.querySelectorAll('.reveal').forEach((element, index) => {
-  element.style.setProperty('--delay', `${Math.min(index % 4, 3) * 70}ms`);
+  element.style.transitionDelay = `${Math.min(index * 55, 330)}ms`;
   observer.observe(element);
 });
-
-document.querySelector('#year').textContent = new Date().getFullYear();
