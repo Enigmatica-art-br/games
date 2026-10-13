@@ -11,6 +11,8 @@
  *  genre     { pt, en }
  *  platforms lista de plataformas
  *  tagline   { pt, en } uma frase
+ *  cover     imagem do jogo (1920×1080 de preferência). Sem capa, a página gera uma arte.
+ *  coverAlt  { pt, en } descrição da imagem
  *  links     site (página do jogo), itch, steam (null = "em breve")
  */
 window.GAMES = [
@@ -19,6 +21,11 @@ window.GAMES = [
     title: 'Case 27: Noema',
     status: 'development',
     hue: 28,
+    cover: 'assets/images/principal.jpg',
+    coverAlt: {
+      pt: 'Fortaleza de pedra cercada por floresta e caminhos.',
+      en: 'A stone fortress surrounded by forest and paths.'
+    },
     year: null,
     genre: { pt: 'Mistério e exploração', en: 'Mystery and exploration' },
     platforms: ['PC'],

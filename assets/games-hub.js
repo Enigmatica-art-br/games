@@ -96,8 +96,11 @@
     var frameOpen = main ? '<a class="frame" data-lens href="' + esc(main) + '"' + (ext(main) ? ' target="_blank" rel="noopener noreferrer"' : '') + ' aria-label="' + esc(tx('frameLabel', { t: g.title })) + '">' : '<div class="frame" data-lens>';
     return '<article class="exhibit' + (n % 2 === 0 ? ' is-flip' : '') + '" style="--h:' + (g.hue == null ? 28 : g.hue) + '" aria-labelledby="t-' + uid + '">' +
       frameOpen +
-        '<div class="frame-art frame-base">' + art(g, uid + 'a', n % 2 === 0) + '</div>' +
-        '<div class="frame-art frame-color" role="img" aria-label="' + esc(tx('coverAlt', { t: g.title })) + '">' + art(g, uid + 'b', n % 2 === 0) + '</div>' +
+        (g.cover
+          ? '<div class="frame-art frame-base"><img src="' + esc(g.cover) + '" alt="" loading="' + (n === 1 ? 'eager' : 'lazy') + '"></div>' +
+            '<div class="frame-art frame-color"><img src="' + esc(g.cover) + '" alt="' + esc(loc(g.coverAlt) || tx('coverAlt', { t: g.title })) + '" loading="' + (n === 1 ? 'eager' : 'lazy') + '"></div>'
+          : '<div class="frame-art frame-base">' + art(g, uid + 'a', n % 2 === 0) + '</div>' +
+            '<div class="frame-art frame-color" role="img" aria-label="' + esc(tx('coverAlt', { t: g.title })) + '">' + art(g, uid + 'b', n % 2 === 0) + '</div>') +
         '<span class="frame-ring" aria-hidden="true"></span>' +
       (main ? '</a>' : '</div>') +
       '<div class="placard">' +
