@@ -4,4 +4,8 @@ Central oficial dos jogos da Enigmática, publicada em `games.enigmatica.art.br`
 
 ## Jogos
 
-- [Noema](https://games.enigmatica.art.br/noema/)
+- [Case 27: Noema](https://games.enigmatica.art.br/noema/)
+
+## Idiomas
+
+O site tem versões em português (Brasil) e inglês. Os textos ficam em `assets/games-i18n.js` (central) e `assets/noema-i18n.js` (Case 27: Noema); a troca é feita por `assets/i18n.js`, que lembra a escolha em todos os subdomínios de `enigmatica.art.br`.
