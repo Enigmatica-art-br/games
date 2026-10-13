@@ -1,4 +1,12 @@
-document.getElementById('year').textContent = new Date().getFullYear();
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const root = document.documentElement;
+
+if (!reduceMotion) {
+  window.addEventListener('pointermove', (event) => {
+    root.style.setProperty('--pointer-x', `${event.clientX}px`);
+    root.style.setProperty('--pointer-y', `${event.clientY}px`);
+  }, { passive: true });
+}
 
 const observer = new IntersectionObserver((entries) => {
   for (const entry of entries) {
@@ -7,9 +15,11 @@ const observer = new IntersectionObserver((entries) => {
       observer.unobserve(entry.target);
     }
   }
-}, { threshold: 0.14 });
+}, { threshold: 0.12, rootMargin: '0px 0px -5% 0px' });
 
 document.querySelectorAll('.reveal').forEach((element, index) => {
-  element.style.transitionDelay = `${Math.min(index * 55, 330)}ms`;
+  element.style.setProperty('--delay', `${Math.min(index % 4, 3) * 70}ms`);
   observer.observe(element);
 });
+
+document.querySelector('#year').textContent = new Date().getFullYear();
