@@ -36,8 +36,7 @@
       var s = localStorage.getItem(KEY);
       if (s === 'pt' || s === 'en') return s;
     } catch (e) {}
-    var nav = (navigator.languages && navigator.languages[0]) || navigator.language || 'pt';
-    return /^pt/i.test(nav) ? 'pt' : 'en';
+    return 'en'; // padrão: inglês
   }
 
   function t(key, lang) {

@@ -1,112 +1,61 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#dde1da">
-  <meta name="description" content="Central oficial dos jogos da Enigmática.">
+  <meta name="theme-color" content="#0d0a08">
+  <meta name="description" content="The official home of Enigmática’s games.">
   <meta property="og:title" content="Enigmática Games">
-  <meta property="og:description" content="Jogos, mundos e enigmas criados pela Enigmática.">
-  <meta property="og:image" content="https://games.enigmatica.art.br/assets/images/principal.jpg">
+  <meta property="og:description" content="Every game from Enigmática, in one place.">
+  <meta property="og:image" content="https://games.enigmatica.art.br/assets/images/enigmatica-logo.png">
   <link rel="canonical" href="https://games.enigmatica.art.br/">
-  <link rel="icon" href="assets/images/enigmatica-logo.png">
-  <link rel="preload" href="assets/images/principal.jpg" as="image">
-  <link rel="preload" href="assets/fonts/bricolage-grotesque-latin-standard-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/games-hub.css?v=10">
-  <title>Jogos — Enigmática</title>
+  <link rel="icon" href="assets/images/enigmatica-mark.png">
+  <link rel="preload" href="assets/fonts/syne-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/games-hub.css?v=20">
+  <title>Games — Enigmática</title>
 </head>
 <body>
-  <a class="skip" href="#acervo" data-i18n="skip">Pular para os jogos</a>
+  <a class="skip" href="#catalog" data-i18n="skip">Skip to the games</a>
 
   <header class="bar">
-    <a class="home" href="https://enigmatica.art.br/" aria-label="Voltar ao hub da Enigmática" data-i18n-attr="aria-label:homeLabel">
-      <img src="assets/images/enigmatica-logo.png" alt="" width="36" height="36">
-      <span>Enigmática</span>
+    <a class="home" href="https://enigmatica.art.br/" aria-label="Back to the Enigmática hub" data-i18n-attr="aria-label:homeLabel">
+      <img src="assets/images/enigmatica-mark.png" alt="" width="32" height="32">
+      <span>Enigmática <b>Games</b></span>
     </a>
-    <nav class="bar-nav" aria-label="Seções" data-i18n-attr="aria-label:navLabel">
-      <a href="#acervo" data-i18n="nav.games">Jogos</a>
-      <a href="#imagens" data-i18n="nav.images">Imagens</a>
-      <a href="#proximo" data-i18n="nav.next">Próximo</a>
-    </nav>
-    <div class="lang" role="group" aria-label="Idioma" data-i18n-attr="aria-label:langGroup">
-      <button type="button" data-lang="pt" aria-pressed="true" lang="pt-BR" title="Português (Brasil)">PT</button>
-      <button type="button" data-lang="en" aria-pressed="false" lang="en" title="English">EN</button>
+    <div class="lang" role="group" aria-label="Language" data-i18n-attr="aria-label:langGroup">
+      <button type="button" data-lang="pt" aria-pressed="false" lang="pt-BR" title="Português (Brasil)">PT</button>
+      <button type="button" data-lang="en" aria-pressed="true" lang="en" title="English">EN</button>
     </div>
   </header>
 
   <main>
-    <section class="opening" aria-labelledby="page-title">
-      <h1 id="page-title" class="mega" data-i18n="title">Jogos</h1>
-      <p class="lede" data-i18n-html="lede">Mundos feitos para serem atravessados.<br>Enigmas feitos para permanecer.</p>
+    <section class="intro" aria-labelledby="page-title">
+      <h1 id="page-title" data-i18n="title">Games</h1>
+      <div class="intro-side">
+        <p class="lede" data-i18n="lede">Worlds made to be crossed. Enigmas made to linger.</p>
+        <p class="count" id="count" aria-live="polite"></p>
+      </div>
     </section>
 
-    <section class="exhibit" id="acervo" aria-labelledby="noema-title">
-      <a class="frame" href="noema/" data-lens aria-label="Abrir o site de Case 27: Noema" data-i18n-attr="aria-label:frameLabel">
-        <img class="frame-base" src="assets/images/principal.jpg" alt="" width="1920" height="1080">
-        <img class="frame-color" src="assets/images/principal.jpg" alt="Fortaleza de pedra cercada por floresta e caminhos, em Case 27: Noema." data-i18n-attr="alt:frameAlt" width="1920" height="1080">
-        <span class="frame-ring" aria-hidden="true"></span>
-      </a>
-
-      <article class="placard">
-        <p class="placard-no"><span data-i18n="placard.no">Jogo nº 1</span><span class="status" data-i18n="status">Em desenvolvimento</span></p>
-        <h2 id="noema-title"><span class="case">Case 27:</span> Noema</h2>
-        <p class="placard-text" data-i18n="placard.text">Explore uma ilha construída sobre segredos. Observe o cenário, relacione pistas e descubra uma linguagem que nunca para para explicar as próprias regras.</p>
-        <dl class="facts">
-          <div><dt data-i18n="facts.genre">Gênero</dt><dd data-i18n="facts.genreValue">Mistério e exploração</dd></div>
-          <div><dt data-i18n="facts.platform">Plataforma</dt><dd>PC</dd></div>
-          <div><dt data-i18n="facts.studio">Estúdio</dt><dd>Enigmática</dd></div>
-        </dl>
-        <div class="actions">
-          <a class="btn btn-solid" href="noema/" data-i18n="cta.site">Abrir o site do jogo</a>
-          <a class="btn" href="https://enigmatica-art.itch.io/noema" target="_blank" rel="noopener noreferrer"><span data-i18n="cta.itch">Jogar no itch.io</span><span class="sr-only" data-i18n="newTab">(abre em nova aba)</span></a>
-          <span class="btn btn-off" aria-disabled="true" data-i18n="cta.steam">Steam: em breve</span>
-        </div>
-      </article>
-    </section>
-
-    <section class="reel" id="imagens" aria-labelledby="reel-title">
-      <div class="reel-head">
-        <h2 id="reel-title" data-i18n="reel.title">Imagens de Case 27: Noema</h2>
-        <div class="reel-ctrl">
-          <button type="button" data-reel="-1" aria-label="Imagem anterior" data-i18n-attr="aria-label:reel.prev"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5 8 12l7 7"/></svg></button>
-          <button type="button" data-reel="1" aria-label="Próxima imagem" data-i18n-attr="aria-label:reel.next"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button>
-        </div>
-      </div>
-      <ul class="reel-track" data-track tabindex="0" aria-label="Galeria" data-i18n-attr="aria-label:reel.label">
-        <li><figure><img src="assets/images/caminho.jpg" alt="" loading="lazy" width="1920" height="1080"><figcaption data-i18n="img.caminho">Caminho ao pôr do sol</figcaption></figure></li>
-        <li><figure><img src="assets/images/investigacao.jpg" alt="" loading="lazy" width="1920" height="1080"><figcaption data-i18n="img.investigacao">Sala de investigação</figcaption></figure></li>
-        <li><figure><img src="assets/images/castelo.jpg" alt="" loading="lazy" width="1920" height="1080"><figcaption data-i18n="img.castelo">O castelo</figcaption></figure></li>
-        <li><figure><img src="assets/images/ruinas.jpg" alt="" loading="lazy" width="1920" height="1080"><figcaption data-i18n="img.ruinas">Ruínas na clareira</figcaption></figure></li>
-        <li><figure><img src="assets/images/mecanismo.jpg" alt="" loading="lazy" width="1920" height="1080"><figcaption data-i18n="img.mecanismo">Sala do mecanismo</figcaption></figure></li>
-        <li><figure><img src="assets/images/cabana.jpg" alt="" loading="lazy" width="1920" height="1080"><figcaption data-i18n="img.cabana">A cabana</figcaption></figure></li>
-        <li><figure><img src="assets/images/torres.jpg" alt="" loading="lazy" width="1920" height="1080"><figcaption data-i18n="img.torres">Torres entre as árvores</figcaption></figure></li>
-        <li><figure><img src="assets/images/interior.jpg" alt="" loading="lazy" width="1920" height="1080"><figcaption data-i18n="img.interior">Interior da casa</figcaption></figure></li>
-      </ul>
-    </section>
-
-    <section class="next" id="proximo" aria-labelledby="next-title">
-      <div class="next-slot" aria-hidden="true">
-        <svg viewBox="0 0 120 120"><path d="M60 8 105 34v52L60 112 15 86V34Z"/><path d="M15 34 60 60l45-26M60 60v52"/></svg>
-      </div>
-      <div class="next-copy">
-        <h2 id="next-title" data-i18n="next.title">Este acervo vai crescer.</h2>
-        <p data-i18n="next.text">Novidades sobre os próximos jogos chegam primeiro ao Discord e ao YouTube.</p>
-        <div class="actions">
-          <a class="btn" href="https://discord.gg/URapb2bbFA" target="_blank" rel="noopener noreferrer"><span data-i18n="next.discord">Entrar no Discord</span><span class="sr-only" data-i18n="newTab">(abre em nova aba)</span></a>
-          <a class="btn" href="https://www.youtube.com/@enigmatica-art" target="_blank" rel="noopener noreferrer"><span data-i18n="next.youtube">Seguir no YouTube</span><span class="sr-only" data-i18n="newTab">(abre em nova aba)</span></a>
-        </div>
-      </div>
+    <section class="catalog" id="catalog" aria-labelledby="catalog-title">
+      <h2 id="catalog-title" class="sr-only" data-i18n="catalogTitle">Catalog</h2>
+      <div class="filters" id="filters" role="group" aria-label="Filter by status" data-i18n-attr="aria-label:filterLabel" hidden></div>
+      <ul class="grid" id="grid"></ul>
     </section>
   </main>
 
   <footer class="foot">
-    <span>© <span id="year">2026</span> Enigmática Games</span>
-    <span>Arthur Nascimento Nogueira</span>
-    <a href="https://www.instagram.com/enigmatica.official/" target="_blank" rel="noopener noreferrer">Instagram</a>
+    <span>© <span id="year">2026</span> Enigmática</span>
+    <nav class="foot-links" aria-label="Official channels" data-i18n-attr="aria-label:channels">
+      <a href="https://www.youtube.com/@enigmatica-art" target="_blank" rel="noopener noreferrer">YouTube</a>
+      <a href="https://discord.gg/URapb2bbFA" target="_blank" rel="noopener noreferrer">Discord</a>
+      <a href="https://www.instagram.com/enigmatica.official/" target="_blank" rel="noopener noreferrer">Instagram</a>
+    </nav>
   </footer>
 
-  <script src="assets/games-i18n.js?v=10"></script>
-  <script src="assets/i18n.js?v=10"></script>
-  <script src="assets/games-hub.js?v=10"></script>
+  <script src="assets/games-data.js?v=20"></script>
+  <script src="assets/games-i18n.js?v=20"></script>
+  <script src="assets/i18n.js?v=20"></script>
+  <script src="assets/games-hub.js?v=20"></script>
 </body>
 </html>
