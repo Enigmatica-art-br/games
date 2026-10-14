@@ -222,3 +222,6 @@ a.btn-solid:hover { background: var(--ink); border-color: var(--ink); color: var
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
 :root{--sand:#13171c;--paper:#1d232a;--ink:#eef0f2;--stone:#9aa5b1;--ember:#ff7b5c;--oxide:#3e5a78;--rule:rgba(238,240,242,.12);--glow:rgba(255,123,92,.14);--bar:rgba(19,23,28,.86);--on-accent:#14171b;--body:#cdd3da;}
+
+.foot-links { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+@media (max-width: 760px) { .foot { justify-content: center; text-align: center; } .foot-links { justify-content: center; } }
