@@ -36,7 +36,7 @@ window.GAMES = [
     links: {
       site: 'noema/',
       itch: 'https://enigmatica-art.itch.io/noema',
-      steam: null
+      steam: 'https://store.steampowered.com/app/5361160'
     }
   }
 ];
