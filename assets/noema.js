@@ -1,4 +1,9 @@
 (function () {
+  /* clicar várias vezes não seleciona texto; arrastar continua selecionando */
+  document.addEventListener('mousedown', function (e) {
+    if (e.detail > 1 && !e.target.closest('input, textarea, [contenteditable]')) e.preventDefault();
+  });
+
   var header = document.querySelector('[data-header]');
   var tick = function () { header.classList.toggle('is-scrolled', scrollY > 30); };
   tick();
