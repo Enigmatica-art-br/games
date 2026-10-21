@@ -2,6 +2,8 @@
 
 Central oficial dos jogos da Enigmática, publicada em `games.enigmatica.art.br`.
 
+**Por enquanto o catálogo está fora do ar:** como só existe um jogo, a raiz (`index.html`) redireciona direto para `noema/`. Para voltar com o catálogo, restaure o `index.html` do commit `1fe2d2d` (os arquivos `assets/games-*` continuam aqui).
+
 ## Jogos
 
 - [Case 27: Noema](https://games.enigmatica.art.br/noema/)

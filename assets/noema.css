@@ -106,6 +106,9 @@ h1, h2, h3 { margin: 0; font-family: 'Cinzel', serif; font-weight: 600; }
 /* ---------- galeria ---------- */
 .section-title { font-size: clamp(24px, 2.6vw, 36px); letter-spacing: .12em; text-transform: uppercase; text-align: center; margin-bottom: 36px; }
 .section-title::after { content: ""; display: block; width: 56px; height: 1px; margin: 20px auto 0; background: var(--gold); }
+.trailer { width: min(100% - 2 * var(--gut), 1180px, (100svh - 230px) * 16 / 9); margin: 0 auto; padding: clamp(70px, 9vw, 130px) 0 0; }
+.trailer-frame { position: relative; aspect-ratio: 16 / 9; border: 1px solid var(--line); background: #000; }
+.trailer-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; background: #000; color-scheme: dark; }
 .gallery { width: min(100% - 2 * var(--gut), var(--wide)); margin: 0 auto; padding: clamp(60px, 8vw, 120px) 0; }
 .shots { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
 .shot { display: block; width: 100%; padding: 0; border: 0; background: none; cursor: zoom-in; overflow: hidden; }
