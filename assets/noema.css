@@ -68,7 +68,7 @@ h1, h2, h3 { margin: 0; font-family: 'Cinzel', serif; font-weight: 600; }
 .hero-inner { position: relative; z-index: 2; padding: 120px var(--gut) 110px; display: grid; justify-items: center; animation: fadeUp 1.6s .5s cubic-bezier(.2, .7, .2, 1) both; }
 .kicker { margin: 0 0 22px; font: 600 12px/1 'Cinzel', serif; letter-spacing: .34em; text-transform: uppercase; color: var(--gold); }
 .logotype { display: grid; justify-items: center; line-height: .9; text-shadow: 0 8px 40px rgba(0, 0, 0, .55); }
-.logo-case { font-size: clamp(26px, 3.4vw, 46px); font-weight: 600; letter-spacing: .42em; margin-right: -.42em; color: #dcc08c; margin-bottom: .3em; }
+.logo-case { font-size: clamp(27px, 3.55vw, 48px); font-weight: 600; letter-spacing: .42em; margin-right: -.42em; color: #dcc08c; margin-bottom: .3em; }
 .logo-main { font-size: clamp(64px, 13vw, 190px); font-weight: 500; letter-spacing: .14em; margin-right: -.14em; }
 .hero-line { margin: 26px 0 40px; font: italic 400 clamp(20px, 2.2vw, 28px)/1.3 'Cormorant', serif; color: #ded8cc; }
 .buy { display: grid; justify-items: center; gap: 14px; }
