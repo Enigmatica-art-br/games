@@ -29,7 +29,7 @@
 
   function initial() {
     var q = new URLSearchParams(location.search).get('lang');
-    if (q === 'pt' || q === 'en') return q;
+    if (q === 'pt' || q === 'en') { save(q); return q; }
     var c = readCookie();
     if (c) return c;
     try {
@@ -48,6 +48,7 @@
 
   function apply(lang) {
     current = lang;
+    var url = new URL(location.href); if (url.searchParams.has("lang")) { url.searchParams.set("lang", lang); history.replaceState(history.state, "", url); }
     var root = document.documentElement;
     root.lang = LANGS[lang];
 
@@ -90,6 +91,13 @@
     apply(lang);
   });
 
+  function syncGlobalLanguage() { var value = readCookie(); if (value && value !== current) apply(value); }
+  window.addEventListener('focus', syncGlobalLanguage);
+  window.addEventListener('pageshow', syncGlobalLanguage);
+  window.addEventListener('storage', function (event) { if (event.key === KEY) syncGlobalLanguage(); });
+  document.addEventListener('visibilitychange', function () { if (!document.hidden) syncGlobalLanguage(); });
+  if (window.cookieStore) window.cookieStore.addEventListener('change', syncGlobalLanguage);
+  window.setInterval(function () { if (!document.hidden) syncGlobalLanguage(); }, 1000);
   window.EnigmaticaI18n = {
     get lang() { return current; },
     t: t,
